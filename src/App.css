@@ -1,14 +1,28 @@
 .App {
   text-align: center;
+  background-image: url('./assets/bg.jpg');
+  background-position: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.App-header > ul {
+  list-style: none;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
+.App-header > ul > li {
+  color: #ff00ff;
+  display: inline;
+  padding-right: 10px;
+}
+
+a,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.App-content {
+  background-color: #282c34ee;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,11 +36,56 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-panel {
+  background-color: #282c34;
+  position: fixed;
+  right: -215px;
+  font-size: 20px;
+  height: 100vh;
+  border-left: #fff 1px solid;
+  width: 180px;
+  padding-left: 30px;
+  padding-top: 50px;
+  transition: right 300ms;
+}
+
+.enabled {
+  right: 0px;
+  transition: right 300ms;
+}
+
+.menu-panel > ul > li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.menu-panel > ul {
+  text-align: left;
+  padding: 0;
+  margin: 20px;
+}
+
+.developer-card {
+  text-align: right;
+}
+
+span.developer-slogan {
+  font-size: 20px;
+}
+
+h1.developer-name {
+  padding: 0;
+  margin: 0;
+  text-shadow: #444 2px 2px;
+}
+
+.menu-button {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  border-radius: 100px;
+  cursor: pointer;
 }
