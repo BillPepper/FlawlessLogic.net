@@ -19,6 +19,12 @@ a,
 a:visited {
   color: #fff;
   text-decoration: none;
+  transition: color 300ms;
+}
+
+a:hover {
+  color: #626977;
+  transition: color 300ms;
 }
 
 .App-content {
@@ -49,7 +55,7 @@ a:visited {
   transition: right 300ms;
 }
 
-.enabled {
+.menu-enabled {
   right: 0px;
   transition: right 300ms;
 }
@@ -88,4 +94,27 @@ h1.developer-name {
   top: 10px;
   border-radius: 100px;
   cursor: pointer;
+  z-index: 5;
+  font-size: 40px;
+  line-height: 26px;
+  transition: transform 300ms;
+}
+
+.menu-button:hover {
+  background-color: #626977;
+  transition: background-color 300ms;
+}
+
+.menu-button-enabled {
+  transform: rotate(90deg);
+  transition: transform 300ms;
+}
+
+.button-line {
+  background-color: #000;
+  height: 5px;
+  top: 13px;
+  position: relative;
+  width: 20px;
+  left: 5px;
 }

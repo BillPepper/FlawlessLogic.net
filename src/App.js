@@ -14,11 +14,17 @@ class App extends Component {
           onClick={() =>
             this.setState({ menuEnabled: !this.state.menuEnabled })
           }
-          className="menu-button"
-        />
+          className={
+            this.state.menuEnabled
+              ? 'menu-button menu-button-enabled'
+              : 'menu-button'
+          }
+        >
+          <div className="button-line" />
+        </div>
         <div
           className={
-            this.state.menuEnabled ? 'menu-panel enabled' : 'menu-panel'
+            this.state.menuEnabled ? 'menu-panel menu-enabled' : 'menu-panel'
           }
         >
           <ul className="navigation">
@@ -26,11 +32,23 @@ class App extends Component {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/test">Test</a>
+              <a href="/test">About</a>
+            </li>
+            <li>
+              <a href="#">Programming</a>
+            </li>
+            <li>
+              <a href="#">Music</a>
+            </li>
+            <li>
+              <a href="#">Social</a>
             </li>
           </ul>
         </div>
-        <div className="App-content">
+        <div
+          onClick={() => this.setState({ menuEnabled: false })}
+          className="App-content"
+        >
           <Router>
             <Switch>
               <Route exact path="/" render={() => this.renderHome()} />
@@ -47,7 +65,7 @@ class App extends Component {
       <div className="developer-card">
         <h1 className="developer-name">Mattes Wenzel</h1>
         <span className="developer-slogan">
-          Front-End Developer and musician
+          Front-End Developer and Musician
         </span>
       </div>
     )
