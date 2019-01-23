@@ -40,7 +40,7 @@ a:hover {
 }
 
 .content-container {
-  background-color: #444;
+  /* background-color: #444; */
   max-width: 800px;
 }
 
@@ -125,6 +125,17 @@ h1.developer-name {
   left: 5px;
 }
 
-/* iframe {
-  max-width: 600px;
-} */
+.profile-picture {
+  background-image: url(./assets/pp.jpg);
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 100px;
+  border: 2px solid;
+  margin: auto;
+}
+
+.developer-about > p {
+  text-align: left;
+  padding: 20px;
+}
