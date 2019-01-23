@@ -68,11 +68,13 @@ class App extends Component {
 
   renderHome = () => {
     return (
-      <div className="developer-card">
-        <h1 className="developer-name">Mattes Wenzel</h1>
-        <span className="developer-slogan">
-          Front-End Developer and Musician
-        </span>
+      <div className="content-container">
+        <div className="developer-card">
+          <h1 className="developer-name">Mattes Wenzel</h1>
+          <span className="developer-slogan">
+            Front-End Developer and Musician
+          </span>
+        </div>
       </div>
     )
   }
