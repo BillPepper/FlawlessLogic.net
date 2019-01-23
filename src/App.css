@@ -39,6 +39,11 @@ a:hover {
   color: white;
 }
 
+.content-container {
+  background-color: #444;
+  max-width: 800px;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -119,3 +124,7 @@ h1.developer-name {
   width: 20px;
   left: 5px;
 }
+
+/* iframe {
+  max-width: 600px;
+} */
