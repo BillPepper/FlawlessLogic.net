@@ -32,16 +32,16 @@ class App extends Component {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/test">About</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href="#">Programming</a>
+              <a href="/programming">Programming</a>
             </li>
             <li>
-              <a href="#">Music</a>
+              <a href="/music">Music</a>
             </li>
             <li>
-              <a href="#">Social</a>
+              <a href="/social">Social</a>
             </li>
           </ul>
         </div>
@@ -52,7 +52,11 @@ class App extends Component {
           <Router>
             <Switch>
               <Route exact path="/" render={() => this.renderHome()} />
-              <Route exact path="/test" render={() => this.renderTest()} />
+              <Route
+                exact
+                path="/(about|programming|music|social)"
+                render={() => this.renderTest()}
+              />
             </Switch>
           </Router>
         </div>
