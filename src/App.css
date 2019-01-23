@@ -43,6 +43,12 @@ a:hover {
   /* background-color: #444; */
   max-width: 800px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container > a {
+  font-size: 15px;
 }
 
 .App-link {
