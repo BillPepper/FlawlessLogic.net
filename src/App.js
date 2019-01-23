@@ -52,13 +52,10 @@ class App extends Component {
           >
             <Switch>
               <Route exact path="/" render={() => this.renderHome()} />
-              <Route
-                exact
-                path="/(coding|social)"
-                render={() => this.renderTest()}
-              />
+              <Route exact path="/(coding)" render={() => this.renderTest()} />
               <Route exact path="/about" render={() => this.renderAbout()} />
               <Route exact path="/music" render={() => this.renderMusic()} />
+              <Route exact path="/social" render={() => this.renderSocial()} />
             </Switch>
           </div>
         </div>
@@ -129,6 +126,29 @@ class App extends Component {
         />
         <a href="https://soundcloud.com/vimptools">
           There is more where this comes from!
+        </a>
+      </div>
+    )
+  }
+
+  renderSocial = () => {
+    return (
+      <div className="content-container socialMediaList">
+        <a href="https://twitter.com/mattesjup">
+          <div className="socialMediaIcon twitterIcon" />
+          Twitter
+        </a>
+        <a href="https://facebook.com/MattesJupWenzel">
+          <div className="socialMediaIcon facebookIcon" />
+          Facebook
+        </a>
+        <a href="https://www.linkedin.com/in/mattes-wenzel-9b034216b/">
+          <div className="socialMediaIcon linkedInIcon" />
+          LinkedIn
+        </a>
+        <a href="https://soundcloud.com/vimptools">
+          <div className="socialMediaIcon soundcloudIcon" />
+          SoundCloud
         </a>
       </div>
     )
