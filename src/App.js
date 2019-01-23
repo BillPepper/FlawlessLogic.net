@@ -36,7 +36,7 @@ class App extends Component {
                 <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="/programming">Programming</Link>
+                <Link to="/coding">Coding</Link>
               </li>
               <li>
                 <Link to="/music">Music</Link>
@@ -54,7 +54,7 @@ class App extends Component {
               <Route exact path="/" render={() => this.renderHome()} />
               <Route
                 exact
-                path="/(programming|social)"
+                path="/(coding|social)"
                 render={() => this.renderTest()}
               />
               <Route exact path="/about" render={() => this.renderAbout()} />
