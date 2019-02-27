@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
+import About from './components/About.js'
+import Home from './components/Home.js'
+import Music from './components/Music.js'
+import Social from './components/Social.js'
+
 class App extends Component {
   componentWillMount() {
     this.setState({ menuEnabled: false })
@@ -51,11 +56,11 @@ class App extends Component {
             className="App-content"
           >
             <Switch>
-              <Route exact path="/" render={() => this.renderHome()} />
+              <Route exact path="/" render={() => <Home />} />
               <Route exact path="/(coding)" render={() => this.renderTest()} />
-              <Route exact path="/about" render={() => this.renderAbout()} />
-              <Route exact path="/music" render={() => this.renderMusic()} />
-              <Route exact path="/social" render={() => this.renderSocial()} />
+              <Route exact path="/about" render={() => <About />} />
+              <Route exact path="/music" render={() => <Music />} />
+              <Route exact path="/social" render={() => <Social />} />
             </Switch>
           </div>
         </div>
@@ -63,93 +68,10 @@ class App extends Component {
     )
   }
 
-  renderHome = () => {
-    return (
-      <div className="content-container">
-        <div className="developer-card">
-          <h1 className="developer-name">Mattes Wenzel</h1>
-          <span className="developer-slogan">
-            Front-End Developer and Musician
-          </span>
-        </div>
-      </div>
-    )
-  }
-
   renderTest = () => {
     return (
       <div>
         <p>This is a test</p>
-      </div>
-    )
-  }
-
-  renderAbout = () => {
-    return (
-      <div className="content-container">
-        <h2>About Me</h2>
-        <div className="profile-picture" />
-        <div className="developer-about">
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </p>
-          <p>
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-            diam nonumy eirmod tempor invidunt ut labore et dolore magna
-            aliquyam erat, sed diam voluptua.
-          </p>
-          <p>
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet.lorem
-          </p>
-        </div>
-      </div>
-    )
-  }
-
-  renderMusic = () => {
-    return (
-      <div className="content-container">
-        <iframe
-          title="soundcloud-widget"
-          min-width="100%"
-          height="450"
-          scrolling="no"
-          frameborder="no"
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/307362001&color=%23626977&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-        />
-        <a href="https://soundcloud.com/vimptools">
-          There is more where this comes from!
-        </a>
-      </div>
-    )
-  }
-
-  renderSocial = () => {
-    return (
-      <div className="content-container socialMediaList">
-        <a href="https://twitter.com/mattesjup">
-          <div className="socialMediaIcon twitterIcon" />
-          Twitter
-        </a>
-        <a href="https://facebook.com/MattesJupWenzel">
-          <div className="socialMediaIcon facebookIcon" />
-          Facebook
-        </a>
-        <a href="https://www.linkedin.com/in/mattes-wenzel-9b034216b/">
-          <div className="socialMediaIcon linkedInIcon" />
-          LinkedIn
-        </a>
-        <a href="https://soundcloud.com/vimptools">
-          <div className="socialMediaIcon soundcloudIcon" />
-          SoundCloud
-        </a>
       </div>
     )
   }
