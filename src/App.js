@@ -68,7 +68,7 @@ class App extends Component {
     )
   }
 
-  renderTest = () => {
+  renderTest() {
     return (
       <div>
         <p>This is a test</p>
